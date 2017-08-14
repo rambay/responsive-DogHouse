@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DogHouse - El espacio para tus mascotas.</title>
+  <link rel="stylesheet" href="css/estilo.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+  <section class="portada background">
+    <header class="header contenedor">
+      <figure class="logotipo">
+        <img src="https://github.com/LeonidasEsteban/invie/blob/master/images/invie.png?raw=true" alt="Logo">
+      </figure>
+      <span class="burguer-button icon-menu" id="btn-burguer"></span>
+      <nav class="menuHeader" id="menu">
+        <ul>
+          <li class="menuHeader-list"><a class="menuHeader-link" href="index.html">Inicio</a></li>
+          <li class="menuHeader-list"><a class="menuHeader-link" href="#razas">Razas</a></li>
+          <li class="menuHeader-list"><a class="menuHeader-link" href="precios.html">Precios</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="contenedor">
+      <h1 class="titulo">El mejor amigo del hombre.</h1>
+      <h3 class="subtitulo">Encontraras todo sobre nuestros amigos.</h3>
+      <a class="button btn-portada">Más información</a>
+    </div>
+  </section>
+  <section id="razas" class="mascotas contenedor">
+    <h2 class="title-top">Conoces mas sobre estas razas de perros.</h2>
+    <div class="video-demo-contenedor">
+      <div class="video-demo">
+        <div class="video-responsive-contenedor">
+          <iframe class="video-responsive-src" width="560" height="315" src="https://www.youtube.com/embed/XXnoilUv7EM?ecver=1" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <article class="dogs">
+      <img class="derecha" data-src="assets/aleman.png" width="350" alt="Chayanne">
+      <div class="contenedor-aleman">
+        <h3 class="title-mascotas">Pastor Aleman</h3>
+          <ol>
+            <li class="menuContent-list"><a class="menuContent-link" href="#">Chayanne</a></li>
+            <li class="menuContent-list"><a class="menuContent-link" href="#">Ricardo Montaner</a></li>
+            <li class="menuContent-list"><a class="menuContent-link" href="#">Laura Pausini</a></li>
+          </ol>
+      </div>
+    </article>
+    <article class="dogs">
+      <img class="izquierda" data-src="assets/pbelga.png" width="350" alt="Miranda">
+      <div class="contenedor-belga">
+        <h3 class="title-mascotas">Pastor Belga</h3>
+          <ol>
+            <li class="menuContent-list"><a class="menuContent-link" href="#">Pelaje Negro</a></li>
+            <li class="menuContent-list"><a class="menuContent-link" href="#"></a></li>
+            <li class="menuContent-list"><a class="menuContent-link" href="#">Playa Limbo</a></li>
+          </ol>
+      </div>
+    </article>
+  </section>
+  <footer class="footer">
+    <div class="contenedor">
+      <div class="contacto">
+        <figure>
+          <img data-src="https://github.com/platzi/invie-responsive/blob/master/images/invie-white.png?raw=true" alt="logo secundario">
+        </figure>
+        <a href="tel:933581579"><strong>Telefono</strong><span>933581579</span></a>
+        <a href="mailto:doghouse@gmail.com"><strong>E-mail</strong><span>doghouse@gmail.com</span></a>
+      </div>
+      <form class="formulario">
+        <div class="col1">
+          <label class="nombre-input" for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="pon tu nombre" />
+          <label class="email-input" for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="Tu email" />
+          <div class="sexo">
+            <label for="mujer">
+              <input type="radio" checked name="sexo" value="mujer"> Mujer
+            </label>
+            <label for="hombre">
+              <input type="radio" name="sexo" value="hombre"> Hombre
+            </label>
+          </div>
+          <div class="intereses">
+            <label for="cotizacion">
+              <input type="checkbox" checked id="cotizacion" value="cotizacion" name="intereses"> Cotizacion
+            </label>
+            <label for="reclamos">
+              <input type="checkbox" id="reclamos" value="reclamos" name="intereses"> Reclamos <br/>
+            </label>
+            <label for="comentarios">
+              <input type="checkbox" id="comentarios" value="comentarios" name="intereses"> Comentarios
+            </label>
+            <label for="otros">
+              <input type="checkbox" id="otros" value="otros" name="intereses"> Otros
+            </label>
+          </div>
+        </div>
+        <div class="col2">
+          <label class="comment" for="mensaje">Comentarios</label>
+          <textarea id="mensaje" name="mensaje" rows="7" cols="30"></textarea>
+          <input type="submit" class="button btn-form" name="enviar" value="Enviar">
+        </div>
+      </form>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
+  <script>
+    const btn = document.getElementById('btn-burguer');
+    const menuP = document.getElementById('menu');
+
+    function toggleMenu(){
+      menuP.classList.toggle('active');
+      btn.classList.toggle('icon-close');
+    }
+
+    function showMenu(){
+      menuP.classList.add('active');
+      btn.classList.add('icon-close');
+    }
+
+    function hideMenu(){
+      menuP.classList.remove('active');
+      btn.classList.remove('icon-close');
+    }
+
+    const consulta = window.matchMedia('(max-width: 500px)');
+    consulta.addListener(mediaQuery);
+
+    function mediaQuery() {
+      if (consulta.matches) {
+        console.log('si se cumple la funcion');
+        btn.addEventListener('touchstart', toggleMenu);
+      } else {
+        console.log('no se cumplio la funcion');
+        btn.removeEventListener('touchstart', toggleMenu);
+      }
+    }
+
+    mediaQuery();
+
+    // lazy loading
+
+    var bLazy = new Blazy({
+      selector: 'img'
+    });
+
+    // gestos touch
+
+    var body = document.body;
+
+    var gestos = new Hammer(body);
+    gestos.on('swipeleft', hideMenu);
+    gestos.on('swiperight', showMenu);
+
+  </script>
+</body>
+</html>
