@@ -54,7 +54,7 @@ body {
 }
 
 .background {
-  background: url(https://images7.alphacoders.com/717/thumb-1920-717802.jpg);
+  background: url(../assets/background.png);
   background-size: cover;
 }
 
