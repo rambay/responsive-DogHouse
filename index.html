@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>DogHouse - El espacio para tus mascotas.</title>
-  <link rel="stylesheet" href="css/estilo.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> -->
+  <style>
+    @font-face{font-family:'icomoon';src:url(./fonts/icomoon.eot?mm2032);src:url(./fonts/icomoon.eot?mm2032#iefix) format("embedded-opentype"),url(./fonts/icomoon.ttf?mm2032) format("truetype"),url(./fonts/icomoon.woff?mm2032) format("woff"),url(./fonts/icomoon.svg?mm2032#icomoon) format("svg");font-weight:400;font-style:normal}[class*=" icon-"]{font-family:'icomoon'!important;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon-menu:before{content:"\e9bd";color:#fff}body{background:#fff;font-family:'Roboto',sans-serif;margin:0}.contenedor{max-width:800px;margin:auto;position:relative}.background{background:url(./assets/background.png);background-size:cover}.menuHeader{position:absolute;right:0}.logotipo{display:inline-block;margin:0}.menuHeader,.menuHeader li{display:inline-block}.menuHeader li{list-style:none;margin-left:30px;display:inline-block}.menuHeader li::before{content:'★';font-size:18px;color:#fff;line-height:30px;padding-right:5px}.menuHeader-link{color:#fff;font-size:16px;font-weight:700;text-decoration:none}.portada{padding:20px}.button{outline:none;background:linear-gradient(to left,#c92d82,#932553);padding:.5em 1em;color:#fff;border:0;font-size:14px;border-radius:6px}.title-top{font-size:25px;padding:1em 0}.titulo{font-size:50px;color:#fff;margin-bottom:0;margin-top:120px}.subtitulo{color:#fff;font-size:18px;margin-top:0}.btn-portada{margin-bottom:120px;display:inline-block}.burguer-button{width:40px;height:40px;line-height:40px;border-radius:50%;background-color:#C01432;display:inline-block;text-align:center;position:fixed;left:15px;top:15px;z-index:3;display:none}.video-responsive-contenedor{padding-top:56.25%;position:relative}.video-responsive-src{position:absolute;left:0;right:0;top:0;bottom:0;width:100%;height:100%}.video-demo{max-width:500px;width:100%;border:4px solid #932553}.video-demo-contenedor{display:flex;justify-content:center;margin-bottom:80px}@media screen and (max-width: 800px){.titulo{font-size:40px;margin-top:60px}.subtitulo{font-size:16px;padding-top:10px}.btn-portada{margin-bottom:20px}.mascotas{text-align:center}.video-demo-contenedor{margin-bottom:30px}}@media screen and (max-width: 650px){.header{text-align:center}.logotipo{margin:0}.menuHeader{position:static;display:block}.menuHeader ul{padding:0}.menuHeader li:first-child{margin:0}}@media screen and (max-width: 500px){.portada .button{display:block}.burguer-button{display:block}.portada .contenedor{position:static}.menuHeader{background:rgba(252,33,62,.8);position:fixed;left:-100%;width:100%;top:0;bottom:0;right:0;z-index:2;display:flex;align-items:center}.menuHeader ul{flex:1}.menuHeader li{display:block;margin:0;padding:8px 0;border-bottom:1px solid #fff}.menuHeader li:before{display:none}.menuHeader li:first-child{border-top:1px solid #fff}.portada{text-align:center}.titulo{font-size:30px;margin-top:30px}.title-top{font-size:20px}.video-demo-contenedor{margin:0 10px 30px}}
+  </style>
 </head>
 <body>
   <section class="portada background">
@@ -158,5 +160,20 @@
     gestos.on('swiperight', showMenu);
 
   </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+  <script>
+
+    WebFont.load({
+
+      google: {
+
+        families: ['Roboto']
+
+      }
+
+    });
+
+  </script>       
+  <link rel="stylesheet" href="css/estilo.css">
 </body>
 </html>
